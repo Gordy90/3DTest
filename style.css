@@ -604,47 +604,86 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* TikTok video container styling */
+/* TikTok video container styling - optimized for mobile */
 .video-container {
+    width: 100%;
+    max-width: 100%;
     border-radius: 12px;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(0, 255, 255, 0.2);
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,255,255,0.2);
     transition: var(--transition-smooth);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    max-width: 300px;
-    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    margin: 0 auto 1.5rem auto;
 }
 
 .video-container:hover {
-    border-color: rgba(0, 255, 255, 0.4);
-    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.2);
+    border-color: rgba(0,255,255,0.4);
+    box-shadow: 0 8px 30px rgba(0,255,255,0.2);
 }
 
+/* Ensure iframe fills the ratio container */
+.ratio {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.ratio.ratio-16x9 {
+    --bs-aspect-ratio: 177.78%;
+    width: 100%;
+    max-width: 100%;
+}
 .video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100% !important;
+    height: 100% !important;
     border-radius: 12px;
     border: none;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: block;
+    background: #000;
 }
 
-/* Adjust ratio for TikTok videos - vertical format */
-.ratio.ratio-16x9 {
-    --bs-aspect-ratio: 177.78%; /* 9:16 ratio for TikTok vertical videos */
-}
-
-@media (max-width: 576px) {
+/* Mobile-first: full width, proper aspect, spacing */
+@media (max-width: 767.98px) {
     .video-container {
-        max-width: 250px;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        padding: 0;
     }
-    
+    .video-container iframe {
+        border-radius: 8px;
+    }
     .ratio.ratio-16x9 {
-        --bs-aspect-ratio: 177.78%; /* Keep vertical ratio on mobile */
+        --bs-aspect-ratio: 177.78%;
+        width: 100%;
+        max-width: 100vw;
+    }
+    .video-showcase .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .video-showcase .col-12,
+    .video-showcase .col-md-6,
+    .video-showcase .col-lg-4 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 
-@media (min-width: 992px) {
+/* Tablet and up: center and constrain width */
+@media (min-width: 768px) {
+    .video-container {
+        max-width: 400px;
+        margin-bottom: 2rem;
+    }
+    .ratio.ratio-16x9 {
+        --bs-aspect-ratio: 177.78%;
+    }
+}
+
+@media (min-width: 1200px) {
     .video-container {
         max-width: 350px;
     }
