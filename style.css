@@ -408,8 +408,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-logo {
-    width: clamp(120px, 15vw, 200px);
-    height: clamp(120px, 15vw, 200px);
+    width: clamp(150px, 25vw, 300px);
+    height: clamp(150px, 25vw, 300px);
     border-radius: 50%;
     border: 2px solid var(--neon-cyan);
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
