@@ -405,6 +405,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     background: radial-gradient(ellipse at center, rgba(0, 255, 255, 0.08) 0%, transparent 70%);
     padding: 1rem 0;
+    padding-top: 6rem; /* Add significant top padding for desktop */
 }
 
 .hero-logo {
