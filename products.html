@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Browse our complete catalog of 3D printed products including home decor, accessories, gifts, and custom items.">
+    <meta name="keywords" content="3D printed products, home decor, accessories, custom items, House Smithson Creations">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="images/HSC.webp" as="image">
+    
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .product-card .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 576px) {
+            .product-card .card-img-top {
+                height: 200px;
+            }
+            
+            /* Hero section mobile optimization */
+            .display-4 {
+                font-size: 2rem !important;
+            }
+            
+            /* Category filters mobile optimization */
+            .category-filter {
+                font-size: 0.875rem;
+                padding: 0.375rem 0.75rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Product cards mobile optimization */
+            .product-item {
+                margin-bottom: 1.5rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+            
+            .card-title {
+                font-size: 1.1rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            .card-text {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+            
+            .badge {
+                font-size: 0.7rem;
+                padding: 0.25rem 0.5rem;
+            }
+            
+            /* Footer mobile optimization */
+            .card-footer {
+                padding: 0.75rem 1rem;
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+            }
+            
+            .btn-sm {
+                width: 100%;
+                padding: 0.5rem;
+            }
+            
+            /* Call to action mobile optimization */
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .btn-lg.me-3 {
+                margin-right: 0 !important;
+            }
+            
+            /* Custom design card mobile optimization */
+            .display-1 {
+                font-size: 3rem !important;
+            }
+            
+            /* Container padding for mobile */
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            /* Section spacing for mobile */
+            .py-5 {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            /* Tablet optimizations */
+            .product-card .card-img-top {
+                height: 220px;
+            }
+            
+            .category-filter {
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Two column layout on tablet */
+            .product-item {
+                margin-bottom: 1.25rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Extra small mobile optimizations */
+            main {
+                padding-top: 70px !important;
+            }
+            
+            .display-4 {
+                font-size: 1.75rem !important;
+            }
+            
+            .lead {
+                font-size: 1rem;
+            }
+            
+            .product-card .card-img-top {
+                height: 180px;
+            }
+            
+            .card-title {
+                font-size: 1rem;
+            }
+            
+            .card-text {
+                font-size: 0.85rem;
+            }
+            
+            .container {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+        }
+        
+        /* Touch-friendly improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .btn {
+                min-height: 44px;
+                touch-action: manipulation;
+            }
+            
+            .category-filter {
+                min-height: 40px;
+                touch-action: manipulation;
+            }
+            
+            .nav-link {
+                padding: 0.75rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/HSC.webp" alt="HSC Logo" class="rounded-circle me-3" width="30" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#custom">Custom Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.etsy.com/shop/YourShopName" target="_blank">Shop Etsy</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 80px;">
+        <!-- Hero Section -->
+        <section class="py-5 bg-primary text-white">
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold mb-3">Our Product Catalog</h1>
+                <p class="lead">Discover our complete range of 3D printed products</p>
+            </div>
+        </section>
+
+        <!-- Product Categories -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                            <button class="btn btn-outline-primary category-filter active" data-category="all">All Products</button>
+                            <button class="btn btn-outline-primary category-filter" data-category="home-decor">Home Decor</button>
+                            <button class="btn btn-outline-primary category-filter" data-category="accessories">Accessories</button>
+                            <button class="btn btn-outline-primary category-filter" data-category="gaming">Gaming</button>
+                            <button class="btn btn-outline-primary category-filter" data-category="gifts">Gifts</button>
+                            <button class="btn btn-outline-primary category-filter" data-category="custom">Custom</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="row g-4" id="products-grid">
+                    <!-- Home Decor Products -->
+                    <article class="col-lg-4 col-md-6 product-item" data-category="home-decor">
+                        <div class="card product-card h-100">
+                            <img src="images/Vase.jpg" class="card-img-top" alt="Modern geometric 3D printed vase">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Geometric Vase</h3>
+                                <p class="card-text">Modern, geometric vase perfect for any decor. Available in multiple colors and sizes.</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary me-1">Home Decor</span>
+                                    <span class="badge bg-info">Popular</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 text-primary">$29.99</span>
+                                <button class="btn btn-primary btn-sm">Order Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-lg-4 col-md-6 product-item" data-category="home-decor">
+                        <div class="card product-card h-100">
+                            <img src="images/plant-pot.jpg" class="card-img-top" alt="Decorative plant pot">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Designer Plant Pots</h3>
+                                <p class="card-text">Stylish plant pots with drainage holes. Perfect for succulents and small plants.</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary">Home Decor</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 text-primary">$15.99</span>
+                                <button class="btn btn-primary btn-sm">Order Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Accessories -->
+                    <article class="col-lg-4 col-md-6 product-item" data-category="accessories">
+                        <div class="card product-card h-100">
+                            <img src="images/Keychain.avif" class="card-img-top" alt="Custom 3D printed keychains">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Custom Keychains</h3>
+                                <p class="card-text">Personalized keychains in various shapes and colors. Perfect for gifts or personal use!</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary me-1">Accessories</span>
+                                    <span class="badge bg-success">Customizable</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 text-primary">Starting at $9.99</span>
+                                <button class="btn btn-primary btn-sm">Customize</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-lg-4 col-md-6 product-item" data-category="accessories">
+                        <div class="card product-card h-100">
+                            <img src="images/phone-stand.jpg" class="card-img-top" alt="Phone stand">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Phone Stand</h3>
+                                <p class="card-text">Adjustable phone stand for desk use. Compatible with most smartphone sizes.</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary">Accessories</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 text-primary">$12.99</span>
+                                <button class="btn btn-primary btn-sm">Order Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Gaming Products -->
+                    <article class="col-lg-4 col-md-6 product-item" data-category="gaming">
+                        <div class="card product-card h-100">
+                            <img src="images/Dice.jpg" class="card-img-top" alt="Giant D20 dice desk organizer">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Giant D20 Dice Holder</h3>
+                                <p class="card-text">Unique oversized 20-sided dice that doubles as a desk organizer for gaming accessories.</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary me-1">Gaming</span>
+                                    <span class="badge bg-warning">Unique</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 text-primary">$19.99</span>
+                                <button class="btn btn-primary btn-sm">Order Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-lg-4 col-md-6 product-item" data-category="gaming">
+                        <div class="card product-card h-100">
+                            <img src="images/dice-set.jpg" class="card-img-top" alt="Custom dice set">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Custom Dice Set</h3>
+                                <p class="card-text">Complete RPG dice set with custom colors and designs. Perfect for tabletop gaming.</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary me-1">Gaming</span>
+                                    <span class="badge bg-success">Customizable</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 text-primary">$24.99</span>
+                                <button class="btn btn-primary btn-sm">Customize</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Gifts -->
+                    <article class="col-lg-4 col-md-6 product-item" data-category="gifts">
+                        <div class="card product-card h-100">
+                            <img src="images/miniature-figurine.jpg" class="card-img-top" alt="Custom miniature figurine">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Custom Miniature Figurines</h3>
+                                <p class="card-text">Personalized miniature figurines based on your photos or specifications. Unique gifts!</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary me-1">Gifts</span>
+                                    <span class="badge bg-success">Customizable</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 text-primary">Starting at $39.99</span>
+                                <button class="btn btn-primary btn-sm">Customize</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-lg-4 col-md-6 product-item" data-category="gifts">
+                        <div class="card product-card h-100">
+                            <img src="images/name-plate.jpg" class="card-img-top" alt="Custom name plate">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Personalized Name Plates</h3>
+                                <p class="card-text">Custom name plates for desks, doors, or gifts. Various fonts and colors available.</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary me-1">Gifts</span>
+                                    <span class="badge bg-success">Customizable</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center">
+                                <span class="fw-bold fs-5 text-primary">$14.99</span>
+                                <button class="btn btn-primary btn-sm">Customize</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Custom Products -->
+                    <article class="col-lg-4 col-md-6 product-item" data-category="custom">
+                        <div class="card product-card h-100 border-primary">
+                            <div class="card-body text-center">
+                                <div class="display-1 text-primary mb-3">
+                                    <i class="bi bi-lightbulb" style="font-size: 4rem;">💡</i>
+                                </div>
+                                <h3 class="card-title h5">Custom Design Service</h3>
+                                <p class="card-text">Have a unique idea? We'll work with you to create a custom 3D printed solution.</p>
+                                <div class="mb-2">
+                                    <span class="badge bg-primary">Custom</span>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 text-center">
+                                <a href="index.html#custom" class="btn btn-primary">Get Quote</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-5 bg-light">
+            <div class="container text-center">
+                <h2 class="mb-3">Don't See What You're Looking For?</h2>
+                <p class="lead mb-4">We specialize in custom 3D printing solutions. Let us bring your ideas to life!</p>
+                <a href="index.html#custom" class="btn btn-primary btn-lg me-3">Request Custom Design</a>
+                <a href="index.html#contact" class="btn btn-outline-primary btn-lg">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h3 class="h5">Contact</h3>
+                    <address>
+                        <a href="mailto:info@hsc3d.com" class="text-white">info@hsc3d.com</a><br>
+                        <a href="tel:+15551234567" class="text-white">(555) 123-4567</a>
+                    </address>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h3 class="h5">Follow Us</h3>
+                    <a href="#" class="text-white me-3">Facebook</a>
+                    <a href="#" class="text-white me-3">Instagram</a>
+                    <a href="#" class="text-white">Twitter</a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h3 class="h5">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="products.html" class="text-white">Products</a></li>
+                        <li><a href="index.html#custom" class="text-white">Custom Orders</a></li>
+                        <li><a href="index.html#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4 small border-top pt-3">
+                <p>&copy; 2024 House Smithson Creations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Product category filtering
+        document.addEventListener('DOMContentLoaded', () => {
+            const categoryButtons = document.querySelectorAll('.category-filter');
+            const productItems = document.querySelectorAll('.product-item');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const category = button.getAttribute('data-category');
+                    
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Filter products
+                    productItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
