@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>House Smithson Creations - Professional 3D Printing Services</title>
+    <meta name="description" content="Professional 3D printing services by House Smithson Creations. Custom designs, prototypes, and high-quality printed products.">
+    <meta name="keywords" content="3D printing, custom design, prototyping, House Smithson Creations">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" as="style">
+    <link rel="preload" href="images/HSC.webp" as="image">
+    
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="150" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#hero" aria-label="House Smithson Creations Home">
+                <img src="images/HSC.webp" alt="HSC Logo" class="rounded-circle me-3" width="30" height="30" loading="eager">
+                <span class="brand-text-short fw-bold fs-3 d-none">HSC</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero" data-target="hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products" data-target="products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery" data-target="gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#custom" data-target="custom">Custom Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-target="contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section vh-100 d-flex align-items-center justify-content-center text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold mb-3">Bring Your Ideas to Life in 3D</h1>
+                <p class="lead mb-4">Professional 3D printing services with precision and creativity</p>
+                <a href="#custom" class="btn btn-primary btn-lg shadow-sm">Get Started Today</a>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-5">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="section-title">Best-Selling Products</h2>
+                    <p class="lead text-muted">Discover our most popular 3D printed items</p>
+                </header>
+                <div class="row g-4">
+                    <article class="col-md-4">
+                        <div class="card product-card h-100">
+                            <img src="images/Vase.jpg" class="card-img-top" alt="Modern geometric 3D printed vase" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Geometric Vase</h3>
+                                <p class="card-text">Modern, geometric vase perfect for any decor. Durable and stylish.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0">
+                                <span class="fw-bold fs-5 text-primary">$29.99</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-4">
+                        <div class="card product-card h-100">
+                            <img src="images/Keychain.avif" class="card-img-top" alt="Custom 3D printed keychains" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Custom Keychains</h3>
+                                <p class="card-text">Personalized keychains in various shapes and colors. Perfect for gifts!</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0">
+                                <span class="fw-bold fs-5 text-primary">Starting at $9.99</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-4">
+                        <div class="card product-card h-100">
+                            <img src="images/Dice.jpg" class="card-img-top" alt="Giant D20 dice desk organizer" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Giant D20 Dice Holder</h3>
+                                <p class="card-text">Unique oversized 20-sided dice that doubles as a desk organizer.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0">
+                                <span class="fw-bold fs-5 text-primary">$19.99</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-5 bg-light">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="section-title">Project Gallery</h2>
+                    <p class="lead text-muted">Recent custom projects and creative solutions</p>
+                </header>
+                <div class="row g-3" role="img" aria-label="Project gallery">
+                    <div class="col-6 col-md-3">
+                        <img src="https://via.placeholder.com/300x300?text=Project+1" class="img-fluid rounded gallery-img" 
+                             alt="3D printing project example 1" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="https://via.placeholder.com/300x300?text=Project+2" class="img-fluid rounded gallery-img" 
+                             alt="3D printing project example 2" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="https://via.placeholder.com/300x300?text=Project+3" class="img-fluid rounded gallery-img" 
+                             alt="3D printing project example 3" loading="lazy">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="https://via.placeholder.com/300x300?text=Project+4" class="img-fluid rounded gallery-img" 
+                             alt="3D printing project example 4" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Design Form -->
+        <section id="custom" class="py-5">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="section-title">Request a Custom Design</h2>
+                    <p class="lead text-muted">Let us bring your unique ideas to life</p>
+                </header>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form class="p-4 rounded shadow-sm bg-dark text-white" method="post" enctype="multipart/form-data" 
+                              aria-label="Custom design request form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="you@email.com" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Design Description *</label>
+                                <textarea class="form-control" id="description" name="description" rows="4" 
+                                          placeholder="Describe your project in detail..." required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="file" class="form-label">Reference Files</label>
+                                <input class="form-control" type="file" id="file" name="files[]" multiple 
+                                       accept="image/*,.pdf,.stl,.obj">
+                                <div class="form-text text-light opacity-75 mt-2">
+                                    Upload images, sketches, or 3D files (optional)
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-3">Submit Request</button>
+                            <p class="text-center mt-3 mb-0 opacity-75 small">We'll respond within 24 hours</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos" class="py-5 bg-light">
+            <div class="container">
+                <header class="text-center mb-5">
+                    <h2 class="section-title">Print Timelapses</h2>
+                    <p class="lead text-muted">Watch our 3D printers in action</p>
+                </header>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9 rounded shadow-sm">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="3D Print Timelapse 1" 
+                                    allowfullscreen loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9 rounded shadow-sm">
+                            <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0" title="3D Print Timelapse 2" 
+                                    allowfullscreen loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h3 class="h5">Contact</h3>
+                    <address>
+                        <a href="mailto:info@hsc3d.com" class="text-white footer-link">info@hsc3d.com</a><br>
+                        <a href="tel:+15551234567" class="text-white footer-link">(555) 123-4567</a>
+                    </address>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h3 class="h5">Follow Us</h3>
+                    <nav aria-label="Social media links">
+                        <a href="#" class="text-white me-3 footer-link" aria-label="Facebook">Facebook</a>
+                        <a href="#" class="text-white me-3 footer-link" aria-label="Instagram">Instagram</a>
+                        <a href="#" class="text-white footer-link" aria-label="Twitter">Twitter</a>
+                    </nav>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h3 class="h5">Quick Links</h3>
+                    <nav aria-label="Footer navigation">
+                        <ul class="list-unstyled">
+                            <li><a href="#hero" class="text-white footer-link">Home</a></li>
+                            <li><a href="#products" class="text-white footer-link">Products</a></li>
+                            <li><a href="#custom" class="text-white footer-link">Custom Orders</a></li>
+                            <li><a href="#contact" class="text-white footer-link">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="text-center mt-4 small border-top pt-3">
+                <p>&copy; 2024 House Smithson Creations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Enhanced navigation handler with proper active state management
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            const navbar = document.querySelector('.navbar');
+            const sections = document.querySelectorAll('section[id], main > section[id]');
+            
+            // Function to update active navigation link
+            const updateActiveNav = () => {
+                const scrollPosition = window.scrollY + navbar.offsetHeight + 50;
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                // Update active states
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+            
+            const scrollToSection = (targetId) => {
+                const target = document.querySelector(targetId);
+                if (target) {
+                    const offset = target.offsetTop - navbar.offsetHeight;
+                    window.scrollTo({ top: offset, behavior: 'smooth' });
+                }
+            };
+            
+            // Handle navigation clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    
+                    // Remove active from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Add active to clicked link
+                    link.classList.add('active');
+                    
+                    scrollToSection(targetId);
+                    
+                    // Close mobile menu
+                    if (navbarCollapse.classList.contains('show')) {
+                        bootstrap.Collapse.getInstance(navbarCollapse).hide();
+                    }
+                });
+            });
+            
+            // Update active state on scroll
+            window.addEventListener('scroll', updateActiveNav);
+            
+            // Set initial active state
+            updateActiveNav();
+        });
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
